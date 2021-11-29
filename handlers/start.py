@@ -140,15 +140,15 @@ async def help_(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📚 Basic Cmd", callback_data="cbbasic"),
-                    InlineKeyboardButton("📕 Advanced Cmd", callback_data="cbadvanced"),
+                    InlineKeyboardButton("😝 Basic Cmd", callback_data="cbbasic"),
+                    InlineKeyboardButton("🤩 Advanced Cmd", callback_data="cbadvanced"),
                 ],
                 [
-                    InlineKeyboardButton("📘 Admin Cmd", callback_data="cbadmin"),
-                    InlineKeyboardButton("📗 Sudo Cmd", callback_data="cbsudo"),
+                    InlineKeyboardButton("😇Admin Cmd", callback_data="cbadmin"),
+                    InInlineKeyboardButton("😎 Sudo Cmd", callback_data="cbsudo"),
                 ],
-                [InlineKeyboardButton("📙 Owner Cmd", callback_data="cbowner")],
-                [InlineKeyboardButton("📔 Fun Cmd", callback_data="cbfun")],
+                [InlineKeyboardButton("🥳 Owner Cmd", callback_data="cbowner")],
+                [InlineKeyboardButton("🤭Fun Cmd", callback_data="cbfun")],
             ]
         ),
     )
@@ -159,7 +159,7 @@ async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("pinging...")
     delta_ping = time() - start
-    await m_reply.edit_text("🏓 `PONG!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_text("😺 `PONG!!`\n" f"👻 `{delta_ping * 1000:.3f} ms`")
 
 
 @Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
